@@ -1,0 +1,528 @@
+/* Dark mode styles */
+:root {
+    --bg-light: #ffffff;
+    --text-light: #1a1a1a;
+    --bg-dark: #1a1a1a;
+    --text-dark: #ffffff;
+    --royal-blue: #4169E1;
+    --gold: #FFD700;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode nav {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .bg-white {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .text-gray-800 {
+    color: #e5e5e5;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #d1d1d1;
+}
+
+body.dark-mode .text-gray-900 {
+    color: #ffffff;
+}
+
+body.dark-mode .bg-gray-50 {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode color overrides */
+body.dark-mode .text-royal-blue,
+body.dark-mode .hover\:text-royal-blue:hover {
+    color: var(--gold) !important;
+}
+
+body.dark-mode .bg-royal-blue {
+    background-color: var(--gold) !important;
+}
+
+/* Hero text specific dark mode styles */
+body.dark-mode .hero-text {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio image styles */
+.portfolio-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Ensure project images are visible in dark mode */
+body.dark-mode .portfolio-image {
+    filter: brightness(1.5) contrast(1.2); /* Increased brightness and added contrast for better visibility */
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--royal-blue);
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: var(--gold);
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Floating Contact Button */
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--royal-blue);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body.dark-mode .floating-contact {
+    background-color: var(--gold);
+    color: #1a1a1a;
+}
+
+.floating-contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Typing effect */
+.typing-text {
+    
+    animation: blink 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+body.dark-mode .typing-text {
+    border-right-color: var(--gold); */ /* Removed to eliminate the vertical rectangle
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor }
+}
+
+}*/
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skill badges */
+.skill-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: var(--royal-blue);
+    color: white;
+    font-size: 0.875rem;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .skill-badge {
+    background-color: var(--gold);
+    color: #1a1a1a;
+}
+
+.skill-badge:hover {
+    transform: scale(1.1);
+}
+
+/* Progress bar animation */
+.progress-bar {
+    height: 4px;
+    background-color: var(--royal-blue);
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    transition: width 0.3s ease;
+}
+
+body.dark-mode .progress-bar {
+    background-color: var(--gold);
+}
+
+/* Smooth transitions */
+body, nav, .bg-white, .text-gray-800, .text-gray-600, .bg-gray-50 {
+    transition: all 0.3s ease;
+}
+
+/* Light mode styles */
+.section-heading {
+    color: var(--royal-blue);
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--royal-blue);
+    border-radius: 2px;
+}
+
+.feature-title {
+    color: var(--royal-blue);
+    font-weight: 600;
+}
+
+.number-highlight {
+    color: var(--royal-blue);
+    font-weight: bold;
+}
+
+/* Enhanced portfolio hover effect */
+.portfolio-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--royal-blue);
+    box-shadow: 0 10px 20px rgba(65, 105, 225, 0.1);
+}
+
+.portfolio-image {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+    transform: scale(1.05);
+}
+
+.portfolio-title {
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--royal-blue);
+    transition: width 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-title::after {
+    width: 100%;
+}
+
+/* Enhanced button styles */
+.primary-button {
+    background-color: var(--royal-blue);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--royal-blue);
+}
+
+.primary-button:hover {
+    background-color: transparent;
+    color: var(--royal-blue);
+}
+
+.outline-button {
+    border: 2px solid var(--royal-blue);
+    color: var(--royal-blue);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.outline-button:hover {
+    background-color: var(--royal-blue);
+    color: white;
+}
+
+/* Service card enhancements */
+.service-card {
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--royal-blue);
+    box-shadow: 0 4px 20px rgba(65, 105, 225, 0.1);
+}
+
+/* Stats highlight */
+.stat-number {
+    color: var(--royal-blue);
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Dark mode overrides - keep existing dark mode styles */
+body.dark-mode .section-heading,
+body.dark-mode .feature-title,
+body.dark-mode .number-highlight,
+body.dark-mode .portfolio-title,
+body.dark-mode .stat-number {
+    color: var(--gold);
+}
+
+body.dark-mode .section-heading::after {
+    background-color: var(--gold);
+}
+
+body.dark-mode .service-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+}
+
+body.dark-mode .primary-button {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: #1a1a1a;
+}
+
+body.dark-mode .primary-button:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+body.dark-mode .outline-button {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+body.dark-mode .outline-button:hover {
+    background-color: var(--gold);
+    color: #1a1a1a;
+}
+
+/* Team Member Styles */
+.team-member {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    border-color: var(--royal-blue);
+    box-shadow: 0 10px 20px rgba(65, 105, 225, 0.1);
+}
+
+.team-member img {
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-link {
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--royal-blue);
+    transition: width 0.3s ease;
+}
+
+.portfolio-link:hover::after {
+    width: 100%;
+}
+
+.portfolio-link svg {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover svg {
+    transform: translateX(4px);
+}
+
+/* Dark mode overrides for team members */
+body.dark-mode .team-member {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .team-member:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
+}
+
+body.dark-mode .team-member h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .team-member p.text-royal-blue {
+    color: var(--gold);
+}
+
+body.dark-mode .portfolio-link {
+    color: var(--gold);
+}
+
+body.dark-mode .portfolio-link:hover {
+    color: #ffeb3b;
+}
+
+body.dark-mode .portfolio-link::after {
+    background-color: var(--gold);
+}
+
+/* Dark mode overrides for portfolio cards */
+body.dark-mode .portfolio-card {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .portfolio-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
+}
+
+body.dark-mode .portfolio-title::after {
+    background-color: var(--gold);
+}
+
+body.dark-mode .portfolio-card .text-royal-blue {
+    color: var(--gold);
+}
+
+/* Form and Input Styles */
+select,
+input,
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* Dark mode form styles */
+body.dark-mode select,
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2d2d2d !important;
+    color: var(--text-dark) !important;
+    border-color: #404040 !important;
+}
+
+body.dark-mode select option {
+    background-color: #2d2d2d;
+    color: var(--text-dark);
+}
+
+/* hCaptcha styles */
+.h-captcha {
+    margin: 1rem 0;
+    height: 78px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible !important;
+}
+
+.h-captcha iframe:not([src*="hcaptcha.com/captcha"]) {
+    height: 78px !important;
+    max-height: 78px !important;
+    position: relative !important;
+    transform: scale(0.9) !important;
+    transform-origin: center center !important;
+}
+
+/* hCaptcha challenge popup styles */
+iframe[src*="hcaptcha.com/captcha"] {
+    height: auto !important;
+    min-height: 650px !important;
+    max-height: 95vh !important;
+    width: 450px !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 999999 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    .h-captcha {
+        height: 65px !important;
+    }
+    
+    .h-captcha iframe:not([src*="hcaptcha.com/captcha"]) {
+        height: 65px !important;
+        max-height: 65px !important;
+        transform: scale(0.85) !important;
+    }
+    
+    iframe[src*="hcaptcha.com/captcha"] {
+        width: 95% !important;
+        min-height: 550px !important;
+        max-height: 90vh !important;
+    }
+}
