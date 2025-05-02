@@ -65,10 +65,6 @@ body.dark-mode .hero-text {
     border-radius: 8px 8px 0 0;
 }
 
-/* Ensure project images are visible in dark mode */
-body.dark-mode .portfolio-image {
-    filter: brightness(1.5) contrast(1.2); /* Increased brightness and added contrast for better visibility */
-}
 
 /* Dark mode toggle button */
 .dark-mode-toggle {
@@ -130,7 +126,7 @@ body.dark-mode .floating-contact {
 }
 
 body.dark-mode .typing-text {
-    border-right-color: var(--gold); */ /* Removed to eliminate the vertical rectangle
+    border-right-color: var(--gold); 
 }
 
 @keyframes blink {
@@ -138,7 +134,7 @@ body.dark-mode .typing-text {
     50% { border-color: currentColor }
 }
 
-}*/
+
 
 /* Scroll animations */
 .fade-in {
@@ -490,22 +486,6 @@ body.dark-mode select option {
     position: relative !important;
     transform: scale(0.9) !important;
     transform-origin: center center !important;
-}
-
-/* hCaptcha challenge popup styles */
-iframe[src*="hcaptcha.com/captcha"] {
-    height: auto !important;
-    min-height: 650px !important;
-    max-height: 95vh !important;
-    width: 450px !important;
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 999999 !important;
-    border: none !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Mobile adjustments */

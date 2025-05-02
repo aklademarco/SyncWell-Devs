@@ -325,3 +325,9 @@ scrollToTop.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Fix for project images not displaying in dark mode
+const portfolioImages = document.querySelectorAll('.portfolio-image');
+portfolioImages.forEach(image => {
+    image.style.filter = 'brightness(1)'; // Ensure images are visible in dark mode
+});
