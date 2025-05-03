@@ -479,10 +479,9 @@ body.dark-mode label {
     color: white !important;
 }
 
-/* hCaptcha styles */
+/* Base hCaptcha style */
 .h-captcha {
     margin: 1rem 0;
-    height: 78px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -490,26 +489,30 @@ body.dark-mode label {
     overflow: visible !important;
 }
 
+/* iframe style */
 .h-captcha iframe:not([src*="hcaptcha.com/captcha"]) {
-    height: 78px !important;
-    max-height: 78px !important;
-    position: relative !important;
     transform: scale(0.9) !important;
     transform-origin: center center !important;
+    position: relative !important;
 }
 
-/* Mobile adjustments */
+/* Mobile-specific adjustments */
 @media (max-width: 640px) {
-    .h-captcha {
-        height: 65px !important;
+    form {
+        display: flex;
+        flex-direction: column;
     }
-    
+
+    .h-captcha {
+        order: 99; /* ensure it goes to the bottom */
+        height: auto !important;
+        margin-top: auto;
+    }
+
     .h-captcha iframe:not([src*="hcaptcha.com/captcha"]) {
-        height: 65px !important;
-        max-height: 65px !important;
         transform: scale(0.85) !important;
     }
-    
+
     iframe[src*="hcaptcha.com/captcha"] {
         width: 95% !important;
         min-height: 550px !important;
