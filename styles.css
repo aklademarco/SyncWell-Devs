@@ -479,21 +479,28 @@ body.dark-mode label {
     color: white !important;
 }
 
-/* Base hCaptcha style */
 .h-captcha {
-    margin: 1rem 0;
+    width: 50%;
+    max-width: 50%;
+    min-height: 300px;
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: visible !important;
+    z-index: 999;
 }
 
-/* iframe style */
-.h-captcha iframe:not([src*="hcaptcha.com/captcha"]) {
-    transform: scale(0.9) !important;
-    transform-origin: center center !important;
-    position: relative !important;
+/* Apply to the iframe that loads the challenge */
+.h-captcha iframe[src*="hcaptcha.com/captcha"] {
+    width: 100% !important;
+    min-height: 500px !important;
+    height: 50% !important;
+    max-height: 50% !important;
+    display: block;
+    overflow: visible !important;
+    transform: none !important;
+    position: static !important;
 }
 
 /* Mobile-specific adjustments */
@@ -504,7 +511,7 @@ body.dark-mode label {
     }
 
     .h-captcha {
-        order: 99; /* ensure it goes to the bottom */
+        order: 99; 
         height: auto !important;
         margin-top: auto;
     }
