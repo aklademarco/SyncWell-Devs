@@ -47,7 +47,11 @@ body.dark-mode .hover\:text-royal-blue:hover {
     color: var(--gold) !important;
 }
 
-body.dark-mode .bg-royal-blue {
+body.dark-mode .bg-royal-blue:not([class*="bg-opacity"]) {
+    background-color: var(--gold) !important;
+}
+
+body.dark-mode .group-hover\:bg-opacity-70.bg-royal-blue {
     background-color: var(--gold) !important;
 }
 
