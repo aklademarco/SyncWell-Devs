@@ -239,12 +239,12 @@ function showPrompt(type, message) {
     // Add to document
     document.body.appendChild(prompt);
     
-    // Animate in
+    
     setTimeout(() => {
         prompt.style.transform = 'translateX(0)';
     }, 10);
     
-    // Remove after 5 seconds
+  
     setTimeout(() => {
         prompt.style.transform = 'translateX(100%)';
         setTimeout(() => {
@@ -291,13 +291,22 @@ teamCards.forEach(card => {
 
 // Add click handler for portfolio links
 const portfolioLinks = document.querySelectorAll('.portfolio-link');
+
 portfolioLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const memberName = link.closest('.team-member').querySelector('h4').textContent;
-        showPrompt('info', `Portfolio for ${memberName} will be available soon!`);
+        const href = link.getAttribute('href');
+
+        // Check if the link is a placeholder (no href or just "#")
+        if (!href || href.trim() === '#') {
+            e.preventDefault(); 
+            const memberName = link.closest('.team-member').querySelector('h4').textContent;
+            showPrompt('info', `Portfolio for ${memberName} will be available soon!`);
+        }
+
+        
     });
 });
+
 
 // Add smooth scroll to top button
 const scrollToTop = document.createElement('button');
