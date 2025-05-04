@@ -3,6 +3,32 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* Add this new overlay class */
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.659); 
+    z-index: 1;
+  }
+  
+  .hero-image > div {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-text {
+    color: white; 
+  }
+  
+  .hero-image p {
+    color: rgba(255, 255, 255, 0.9); /* Light color instead of gray-600 */
   }
 
 /* Dark mode styles */
