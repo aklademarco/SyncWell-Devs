@@ -4,9 +4,16 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    min-height: 300px;
+    width: 100%;
   }
-  
-  /* Add this new overlay class */
+
+  @media screen and (max-width: 768px) {
+    .hero-image {
+        background-position: center center;
+        min-height: 200px;
+    }
+  }
   .hero-image::before {
     content: '';
     position: absolute;
@@ -21,6 +28,7 @@
   .hero-image > div {
     position: relative;
     z-index: 2;
+    padding: 20px;
   }
   
   .hero-text {
@@ -28,7 +36,7 @@
   }
   
   .hero-image p {
-    color: rgba(255, 255, 255, 0.9); /* Light color instead of gray-600 */
+    color: rgba(255, 255, 255, 0.9); 
   }
 
 /* Dark mode styles */
