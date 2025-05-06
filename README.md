@@ -17,7 +17,7 @@ A modern, responsive website for clients to book professional web development se
 
 - **HTML**
 - **Tailwind CSS (via CDN)**
-- **JavaScript (optional for interactivity)**
+- **JavaScript**
 
 ## 🧠 Structure (Simplified)
 
@@ -33,6 +33,6 @@ graph TD
     A --> I[FAQs]
 ```
 
-# Merged remote changes with local repository to resolve conflicts and integrate updates.
+
 
 
