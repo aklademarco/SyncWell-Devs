@@ -1,4 +1,4 @@
-.hero-image {
+/* .hero-image {
     background-image: url('/hero-image.png');
     background-size: cover;
     background-position: center;
@@ -29,7 +29,7 @@
     position: relative;
     z-index: 2;
     padding: 20px;
-  }
+  } */
   
   .hero-text {
     color: white; 
