@@ -723,3 +723,21 @@ body.dark-mode .form-submit:hover {
     padding: 3px 8px;
   }
 }
+
+.h-captcha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  min-height: 78px; /* hCaptcha default height */
+  box-sizing: border-box;
+}
+
+body.dark-mode .h-captcha {
+  background: #2d2d2d !important;
+  border-color: #404040 !important;
+}
